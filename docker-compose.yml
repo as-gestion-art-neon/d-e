@@ -1,0 +1,10 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: de-vitrine:latest
+    container_name: de-vitrine
+    restart: unless-stopped
+    ports:
+      - "${SITE_PORT:-8080}:80"
