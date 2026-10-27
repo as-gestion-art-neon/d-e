@@ -79,7 +79,9 @@ networks:
   ```
   Conseil : largeur max ~1600 px, JPEG qualité 80.
 - **Téléphone / e-mail** : rechercher `0646926988` / `valentinligaud@gmail.com` dans `index.html`.
-- **Couleurs** : variables en haut de `site/css/style.css`.
+- **Couleurs / thème** : thème « Prairie » dans `site/css/theme-prairie.css` (variables en haut du fichier : chêne, vert pâturage, miel, sève, foin). Les polices sont hébergées localement dans `site/fonts/` (aucun appel à Google Fonts).
+- **Mosaïque 01 / 02 / 03** : section `.metiers` de `index.html` ; placement des tuiles en fin de `theme-prairie.css` (`.tile--roof`, `.tile--tree`, `.tile--bug`).
 - **Frelon animé** : `site/js/critters.js` (`CATCH_AFTER` = délai avant capture en secondes, `BEES` = nombre d'abeilles). Pour le désactiver, retirer la ligne `<script src="js/critters.js" defer></script>` de `index.html`. L'animation est automatiquement coupée pour les visiteurs ayant activé « réduire les animations ».
+- **Nid de frelons (en-tête)** : `site/js/nest.js` (`HITS_TO_DROP` = nombre de clics avant la chute, 20 par défaut). Le message affiché après destruction est le bloc `#nest-toast` en bas de `index.html`. Pour retirer le jeu : supprimer le bouton `#nest`, le bloc `#nest-toast` et la ligne `<script src="js/nest.js" defer></script>`.
 
 Après un `git push`, redéployez la stack dans Portainer (*Pull and redeploy*) ou laissez la mise à jour automatique GitOps s'en charger.
