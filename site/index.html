@@ -10,10 +10,8 @@
   <meta property="og:image" content="img/camion-intervention.jpg">
   <meta name="theme-color" content="#2b1d14">
   <link rel="icon" href="img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme-prairie.css">
 </head>
 <body>
 
@@ -31,6 +29,29 @@
       <a href="#communes">Communes</a>
       <a href="#contact">Contact</a>
     </nav>
+<button class="nest" id="nest" type="button" aria-label="Nid de frelons : cliquez pour le faire tomber" title="Un nid de frelons… faites-le tomber !">
+      <span class="nest__swing"><span class="nest__body">
+        <svg viewBox="0 0 40 54" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="nestBody"><path d="M20 9C33 9 37 23 36 32C35 44 27 51 20 51C13 51 5 44 4 32C3 23 7 9 20 9Z"/></clipPath></defs>
+          <path d="M1 5Q12 1 22 3T39 4" fill="none" stroke="#6e5640" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M33 3.6l3-3.4M8 3.2 5 0" stroke="#6e5640" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M20 3v7" stroke="#7a5a38" stroke-width="2.4" stroke-linecap="round"/>
+          <path class="nest__shell" d="M20 9C33 9 37 23 36 32C35 44 27 51 20 51C13 51 5 44 4 32C3 23 7 9 20 9Z" fill="#cdb084"/>
+          <g clip-path="url(#nestBody)" fill="none" stroke="#9c7a4f" stroke-width="1.3" stroke-linecap="round">
+            <path d="M2 16q4-3 8 0t8 0 8 0 8 0 8 0"/><path d="M0 22q4-3 8 0t8 0 8 0 8 0 8 0"/>
+            <path d="M2 28q4-3 8 0t8 0 8 0 8 0 8 0"/><path d="M0 34q4-3 8 0t8 0 8 0 8 0 8 0"/>
+            <path d="M2 40q4-3 8 0t8 0 8 0 8 0 8 0"/><path d="M0 46q4-3 8 0t8 0 8 0 8 0 8 0"/>
+          </g>
+          <ellipse cx="26" cy="38" rx="2.8" ry="3.4" fill="#3b2a1c"/>
+          <path d="M20 9C33 9 37 23 36 32C35 44 27 51 20 51C13 51 5 44 4 32C3 23 7 9 20 9Z" fill="none" stroke="#7a5a38" stroke-width="1.5"/>
+          <g fill="none" stroke="#3b2a1c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path class="nest__crack" d="M12 14l3 5-2 4 4 3"/>
+            <path class="nest__crack" d="M31 20l-4 4 2 5-3 4 2 4"/>
+            <path class="nest__crack" d="M18 51l1-6-3-4 3-5-2-5 4-4"/>
+          </g>
+        </svg>
+      </span></span>
+    </button>
     <a class="btn btn--call" href="tel:+33646926988">📞 06 46 92 69 88</a>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
@@ -52,12 +73,44 @@
         <img src="img/camion-intervention.jpg" alt="Le camion d'intervention D&E devant une église de la Vienne" loading="eager">
       </div>
     </div>
+  </section>
+
+  <!-- MOSAÏQUE DES MÉTIERS -->
+  <section class="metiers" aria-labelledby="metiers-title">
     <div class="wrap">
-      <ul class="pillars">
-        <li><a href="#demoussage" class="pillar pillar--roof"><span class="pillar__num">01</span><strong>Démoussage</strong><small>Toitures &amp; tuiles</small></a></li>
-        <li><a href="#elagage" class="pillar pillar--tree"><span class="pillar__num">02</span><strong>Élagage</strong><small>Taille &amp; abattage</small></a></li>
-        <li><a href="#desinsectisation" class="pillar pillar--bug"><span class="pillar__num">03</span><strong>Désinsectisation</strong><small>Frelons &amp; nuisibles</small></a></li>
-      </ul>
+      <div class="metiers__head">
+        <p class="eyebrow">Nos métiers</p>
+        <h2 id="metiers-title">Trois savoir-faire, un seul interlocuteur</h2>
+      </div>
+      <div class="tiles">
+        <a class="tile tile--roof" href="#demoussage">
+          <img src="img/tile-demoussage.jpg" alt="" loading="lazy">
+          <span class="tile__body">
+            <span class="tile__num">01</span>
+            <strong class="tile__title">Démoussage</strong>
+            <span class="tile__text">Toitures, tuiles &amp; faîtages remis à neuf</span>
+            <span class="tile__more">Découvrir <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="tile tile--tree" href="#elagage">
+          <img src="img/elagage-bouleau.jpg" alt="" loading="lazy">
+          <span class="tile__body">
+            <span class="tile__num">02</span>
+            <strong class="tile__title">Élagage</strong>
+            <span class="tile__text">Taille, sécurisation &amp; abattage</span>
+            <span class="tile__more">Découvrir <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a class="tile tile--bug" href="#desinsectisation">
+          <img src="img/nid-frelons-arbre.jpg" alt="" loading="lazy">
+          <span class="tile__body">
+            <span class="tile__num">03</span>
+            <strong class="tile__title">Désinsectisation</strong>
+            <span class="tile__text">Frelons, guêpes, rongeurs &amp; nuisibles</span>
+            <span class="tile__more">Découvrir <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -237,7 +290,13 @@
   <a class="mbar__wa" href="https://wa.me/33646926988?text=Bonjour%2C%20je%20vous%20envoie%20une%20photo%20pour%20un%20diagnostic%20%3A%20" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.6 2.9 6.5 6.5 6.5l1-1.6-2-1-1 1a4.5 4.5 0 0 1-2.4-2.4l1-1-1-2L9.6 8" fill="currentColor"/></svg>Envoyer une photo</a>
 </nav>
 
+<div class="nest-toast" id="nest-toast" role="status" aria-live="polite">
+  <p><strong>Nid détruit, bravo&nbsp;!</strong> Un vrai nid chez vous&nbsp;? <a href="https://wa.me/33646926988?text=Bonjour%2C%20je%20vous%20envoie%20une%20photo%20pour%20un%20diagnostic%20%3A%20" target="_blank" rel="noopener">Envoyez-moi une photo</a>.</p>
+  <button class="nest-toast__close" type="button" aria-label="Fermer">×</button>
+</div>
+
 <script src="js/main.js" defer></script>
 <script src="js/critters.js" defer></script>
+<script src="js/nest.js" defer></script>
 </body>
 </html>
